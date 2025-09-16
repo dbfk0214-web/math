@@ -1,0 +1,103 @@
+\[
+\text{주어진 연립방정식:}
+\]
+
+\[
+\begin{cases}
+2x + 4y = 5 \\
+6x + 2y = 7
+\end{cases}
+\]
+
+\[
+\text{이를 행렬 형태로 쓰면: }
+\quad
+\begin{bmatrix}
+2 & 4 \\
+6 & 2
+\end{bmatrix}
+\begin{bmatrix}
+x \\
+y
+\end{bmatrix}
+=
+\begin{bmatrix}
+5 \\
+7
+\end{bmatrix}
+\]
+
+\[
+AX = B, \quad X = A^{-1}B
+\]
+
+\[
+A =
+\begin{bmatrix}
+2 & 4 \\
+6 & 2
+\end{bmatrix},
+\quad
+B =
+\begin{bmatrix}
+5 \\
+7
+\end{bmatrix}
+\]
+
+\[
+\det(A) = (2)(2) - (6)(4) = 4 - 24 = -20
+\]
+
+\[
+A^{-1} =
+\frac{1}{\det(A)}
+\begin{bmatrix}
+2 & -4 \\
+-6 & 2
+\end{bmatrix}
+=
+\frac{1}{-20}
+\begin{bmatrix}
+2 & -4 \\
+-6 & 2
+\end{bmatrix}
+\]
+
+\[
+X = A^{-1}B =
+\frac{1}{-20}
+\begin{bmatrix}
+2 & -4 \\
+-6 & 2
+\end{bmatrix}
+\begin{bmatrix}
+5 \\
+7
+\end{bmatrix}
+\]
+
+\[
+=
+\frac{1}{-20}
+\begin{bmatrix}
+2\cdot 5 + (-4)\cdot 7 \\
+-6\cdot 5 + 2\cdot 7
+\end{bmatrix}
+=
+\frac{1}{-20}
+\begin{bmatrix}
+-18 \\
+-16
+\end{bmatrix}
+\]
+
+\[
+X =
+\begin{bmatrix}
+0.9 \\
+0.8
+\end{bmatrix}
+\quad \Rightarrow \quad
+x = 0.9,\; y = 0.8
+\]

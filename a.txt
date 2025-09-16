@@ -1,0 +1,107 @@
+\[
+\begin{bmatrix}
+2 & 4 \\
+6 & 2
+\end{bmatrix}
+\begin{bmatrix}
+x \\
+y
+\end{bmatrix}
+=
+\begin{bmatrix}
+5 \\
+7
+\end{bmatrix}
+\]
+
+\[
+A =
+\begin{bmatrix}
+2 & 4 \\
+6 & 2
+\end{bmatrix},
+\quad
+X =
+\begin{bmatrix}
+x \\
+y
+\end{bmatrix},
+\quad
+B =
+\begin{bmatrix}
+5 \\
+7
+\end{bmatrix}
+\]
+
+\[
+AX = B \quad \Rightarrow \quad X = A^{-1}B
+\]
+
+\[
+A^{-1} =
+\frac{1}{(2)(2) - (6)(4)}
+\begin{bmatrix}
+2 & -4 \\
+-6 & 2
+\end{bmatrix}
+=
+\frac{1}{-20}
+\begin{bmatrix}
+2 & -4 \\
+-6 & 2
+\end{bmatrix}
+\]
+
+\[
+X =
+\frac{1}{-20}
+\begin{bmatrix}
+2 & -4 \\
+-6 & 2
+\end{bmatrix}
+\begin{bmatrix}
+5 \\
+7
+\end{bmatrix}
+=
+\frac{1}{-20}
+\begin{bmatrix}
+2\cdot 5 + (-4)\cdot 7 \\
+-6\cdot 5 + 2\cdot 7
+\end{bmatrix}
+=
+\frac{1}{-20}
+\begin{bmatrix}
+-18 \\
+-16
+\end{bmatrix}
+\]
+
+\[
+X =
+\begin{bmatrix}
+0.9 \\
+0.8
+\end{bmatrix}
+\quad \Rightarrow \quad
+x = 0.9,\; y = 0.8
+\]
+
+
+
+import numpy as np
+
+# 계수 행렬 A
+A = np.array([[2, 4],
+              [6, 2]])
+
+# 상수 벡터 B
+B = np.array([5, 7])
+
+# 해 구하기 (X = A^{-1}B)
+X = np.linalg.solve(A, B)
+
+print("해:", X)
+print(f"x = {X[0]}, y = {X[1]}")
+
